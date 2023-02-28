@@ -3,6 +3,9 @@
 // Первоначальный массив можно ввести с клавиатуры,
 // либо задать на старте выполнения алгоритма.
 
+
+
+// Метод генерации массива
 string[] GenerateArray(int itemCount, int maxWordLen)
 {
     string[] result = new string[itemCount];
@@ -27,6 +30,7 @@ string[] GenerateArray(int itemCount, int maxWordLen)
     return result;
 }
 
+// Метод печати массива
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -37,6 +41,7 @@ void PrintArray(string[] array)
     Console.WriteLine("");
 }
 
+// Метод генерации отфильтрованного массива
 string[] ArrayFilter(string[] array, int num)
 {
     string[] arr = new string[0];
@@ -58,9 +63,9 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите желаемое количество строк в массиве");
 int itemCount = Convert.ToInt32(Console.ReadLine());
 
-string[] sourceArray = GenerateArray(itemCount, number * 2);
-string[] filteredArray = ArrayFilter(sourceArray, number);
+string[] sourceArray = GenerateArray(itemCount, number * 2); // Вызов метода заполнения массива строк
+string[] filteredArray = ArrayFilter(sourceArray, number); // Вызов метода фильтруещего массив строк
 
-PrintArray(sourceArray);
+PrintArray(sourceArray); // Печать начально массива строк
 Console.WriteLine("Результат");
-PrintArray(filteredArray);
+PrintArray(filteredArray); // Печать отфильтрованного массива строк
