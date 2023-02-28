@@ -37,11 +37,30 @@ void PrintArray(string[] array)
     Console.WriteLine("");
 }
 
+string[] ArrayFilter(string[] array, int num)
+{
+    string[] arr = new string[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= num)
+        {
+            int currLen = arr.Length;
+            Array.Resize(ref arr, currLen + 1);
+            arr[currLen] = array[i];
+        }
+    }
+    return arr;
+}
+
+
 Console.WriteLine("Введите желаемое количество символов для проверки");
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите желаемое количество строк в массиве");
 int itemCount = Convert.ToInt32(Console.ReadLine());
 
 string[] sourceArray = GenerateArray(itemCount, number * 2);
+string[] filteredArray = ArrayFilter(sourceArray, number);
 
 PrintArray(sourceArray);
+Console.WriteLine("Результат");
+PrintArray(filteredArray);
