@@ -53,7 +53,7 @@ string[] ArrayFilter(string[] array, int num)
 }
 
 
-Console.WriteLine("Введите желаемое количество символов для проверки");
+Console.WriteLine("Введите максимальную длину строки");
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите желаемое количество строк в массиве");
 int itemCount = Convert.ToInt32(Console.ReadLine());
