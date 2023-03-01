@@ -59,12 +59,12 @@ string[] ArrayFilter(string[] array, int num)
 
 
 Console.WriteLine("Введите максимальную длину строки");
-int number = Convert.ToInt32(Console.ReadLine());
+int maxWordLen = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите желаемое количество строк в массиве");
 int itemCount = Convert.ToInt32(Console.ReadLine());
 
-string[] sourceArray = GenerateArray(itemCount, number * 2); // Вызов метода заполнения массива строк
-string[] filteredArray = ArrayFilter(sourceArray, number); // Вызов метода фильтруещего массив строк
+string[] sourceArray = GenerateArray(itemCount, maxWordLen * 2); // Вызов метода заполнения массива строк
+string[] filteredArray = ArrayFilter(sourceArray, maxWordLen); // Вызов метода фильтруещего массив строк
 
 PrintArray(sourceArray); // Печать начально массива строк
 Console.WriteLine("Результат");
